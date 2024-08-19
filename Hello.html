@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Base button styling */
+.unstop-button {
+    background-color: transparent; /* Unstop's primary color */
+    color: white; /* Text color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+/* .unstop-button:hover {
+    background: #187bcd;
+    animation: animate1 5s linear ease-in;
+    overflow: hidden; */
+    /* background-color: #187bcd; Darker shade for hover */
+    /* transform: translate(200px, 50%); */
+ /* Slightly enlarges the button */
+/* } */
+.hov{
+    border-radius: 5px;
+    width: 100px;
+    background-color: #1E90FF;
+    transition: width 2s ease;
+}
+.hov:hover{
+    /* background: #187bcd; */
+    /* width: 300px; */
+    /* animation: animate1 5s linear ease-in; */
+}
+.hh{
+    width: 0px;
+    background-color: #1E90FF;
+    transition: width 2s ease;
+}
+.increase{
+    width: 200px;
+    background: #187bcd;
+    /* transition: width 2s ease; */
+}
+/* @keyframes animate1 {
+    0%{
+        width: 120px;
+        background: #187bcd;
+    }
+    50%{
+        width: 140px;
+        background: #0d4676;
+    }
+    75%{
+        width: 160px;
+    }
+    100%{
+        width: 180px;
+        background: #000000;
+    }
+} */
+
+/* Optional active state */
+.unstop-button:active {
+    background-color: #1565a5; /* Even darker shade when active */
+    transform: scale(0.98); /* Slightly shrinks the button */
+}
+.p{
+    z-index: 1000px;
+}
+    </style>
 </head>
 <body>
     <h1>Hello</h1>
     <h2>Hii This is eddited in GitHub</h2>
+    <div class="hov" id="hov">
+        <div class="hh"></div>
+        <button class="unstop-button" id="btn"><div class="hh"></div><p>Unstop</p></button>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("mouseover",() => document.getElementById("btn").style.width="20px");
+        document.getElementById("btn").addEventListener("mouseout",() => document.getElementById("btn").style.width="100px");
+        // document.getElementById("btn").addEventListener("click",() => document.getElementById("btn").style.width="250px");
+        // document.getElementById("btn").addEventListener("active",() => document.getElementById("btn").style.width="280px");
+        // document.getElementById("hov").addEventListener("blur",() => document.getElementById("hh").classList.remove("increase"));
+        // document.getElementById("btn").addEventListener("blur",() => document.getElementById("hh").classList.remove("increase"));
+    </script>
 </body>
 </html>
